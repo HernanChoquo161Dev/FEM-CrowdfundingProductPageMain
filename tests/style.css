@@ -1,0 +1,45 @@
+.content {
+  position: relative;
+}
+/*thanks block*/
+.thanks {
+  background-color: #ffffff;
+
+  max-width: 54rem;
+
+  display: none;
+
+  opacity: 0;
+
+  padding: 5rem 4rem;
+
+  position: absolute;
+  top: 45rem;
+
+  text-align: center;
+
+  border-radius: 1rem;
+
+  z-index: 500;
+}
+.thanks--show {
+  display: block;
+  opacity: 1;
+}
+.thanks__box-image {
+  margin-bottom: 4rem;
+}
+.thanks__image {
+  width: 8rem;
+}
+.thanks__title {
+  font-size: 24px;
+
+  margin-bottom: 2rem;
+}
+.thanks__text {
+  color: var(--color-dark-gray);
+  font-size: 16px;
+
+  margin-bottom: 4rem;
+}
