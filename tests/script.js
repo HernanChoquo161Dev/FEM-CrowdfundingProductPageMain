@@ -1,4 +1,4 @@
-/* export function createElement(name, props, children) {
+export function createElement(name, props, children) {
     const element = document.createElement(name);
   
     //instanceof
@@ -59,4 +59,4 @@ getUsers().then(res => {
     const userList = createElement("ul", { class: "user-list" }, users);
   
     app.appendChild(userList);
-  }); */
+  });

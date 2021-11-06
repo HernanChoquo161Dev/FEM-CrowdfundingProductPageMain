@@ -14,28 +14,19 @@
 <body>
   <!--support selection section-->
   <section class="support-menu">
-    <!--thanks block-->
-    <!--<div class="thanks">
-      <div class="thanks__box-image">
-        <img src="./images/icon-check.svg" alt="" class="thanks__image">
-      </div>
-      <h2 class="thanks__title">Thanks for your support!</h2>
-      <p class="thanks__text">Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get an email once our campaign is completed.</p>
-      <button class="btn-support btn-support--thanks">Got it!</button>
-    </div>-->
     <!--support window block-->
     <div class="support-window">
       <div class="support-window__image-box">
-        <img src="./images/icon-close-modal.svg" alt="" class="support-menu__image">
+        <img src="./images/icon-close-modal.svg" alt="" class="support-window__image">
       </div>
       <h2 class="support-window__title">Back this project</h2>
       <p class="support-window__text">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
       <!--support block-->
-      <div class="support support--margin">
+      <div class="support">
         <div class="support__content">
-          <div class="support__option-box support__option-box--margin">
-            <input type="radio" id="no-reward" tabindex="1" name="project-support" value="" class="support__radio">
-            <label for="no-reward" class="support__title">Pledge with no reward</label>
+          <div class="radio-info__option-box radio-info__option-box--margin">
+            <input type="radio" id="no-reward" tabindex="1" name="project-support" value="" class="radio-info__radio">
+            <label for="no-reward" class="radio-info__title">Pledge with no reward</label>
           </div>
           <p class="support__text">Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.</p>
         </div>
@@ -43,13 +34,14 @@
       <!--support block-->
       <div class="support support--margin">
         <div class="support__content">
-          <div class="support__title-box">
-            <div class="support__option-box">
-              <input type="radio" id="bamboo-stand" tabindex="2" name="project-support" value="" class="support__radio">
-              <label for="bamboo-stand" class="support__title">Bamboo Stand</label>
-              <p class="support__pledge">Pledge $25 or more</p>
+          <!--radio info block-->
+          <div class="radio-info">
+            <div class="radio-info__option-box">
+              <input type="radio" id="bamboo-stand" tabindex="2" name="project-support" value="" class="radio-info__radio">
+              <label for="bamboo-stand" class="radio-info__title">Bamboo Stand</label>
+              <p class="radio-info__text">Pledge $25 or more</p>
             </div>
-            <p class="support__amount-pledge"><span>101</span> left</p>
+            <p class="radio-info__amount"><span>101</span> left</p>
           </div>
           <p class="support__text">You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.</p>
         </div>
@@ -69,13 +61,13 @@
       <!--support block-->
       <div class="support support--margin">
         <div class="support__content">
-          <div class="support__title-box">
-            <div class="support__option-box">
-              <input type="radio" id="black-edition" tabindex="3" name="project-support" value="" class="support__radio">
-              <label for="black-edition" class="support__title">Black Edition Stand</label>
-              <p class="support__pledge">Pledge $75 or more</p>
+          <div class="radio-info">
+            <div class="radio-infot__option-box">
+              <input type="radio" id="black-edition" tabindex="3" name="project-support" value="" class="radio-info__radio">
+              <label for="black-edition" class="radio-info__title">Black Edition Stand</label>
+              <p class="radio-info__text">Pledge $75 or more</p>
             </div>
-            <p class="support__amount-pledge"><span>64</span> left</p>
+            <p class="radio-info__amount"><span>64</span> left</p>
           </div>
           <p class="support__text support__text--padding">You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
         </div>
@@ -93,15 +85,15 @@
         </div>
       </div>
       <!--support block-->
-      <div class="support">
+      <div class="support support--margin">
         <div class="support__content">
-          <div class="support__title-box">
-            <div class="support__option-box">
-              <input type="radio" id="mahogany-special" tabindex="4" name="project-support" value="" class="support__radio">
-              <label for="mahogany-special" class="support__title">Mahogany Special Edition</label>
-              <p class="support__pledge">Pledge $200 or more</p>
+          <div class="radio-info">
+            <div class="radio-info__option-box">
+              <input type="radio" id="mahogany-special" tabindex="4" name="project-support" value="" class="radio-info__radio">
+              <label for="mahogany-special" class="radio-info__title">Mahogany Special Edition</label>
+              <p class="radio-info__text">Pledge $200 or more</p>
             </div>
-            <p class="support__amount-pledge"><span>0</span> left</p>
+            <p class="radio-info__amount"><span>0</span> left</p>
           </div>
           <p class="support__text">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
         </div>
@@ -244,5 +236,7 @@
     </div>
   </main>
   <script src="./js/script.js"></script>
+  <script src="./js/factory.js"></script>
+  <script src="./js/fetch.js"></script>
 </body>
 </html>

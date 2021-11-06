@@ -425,34 +425,35 @@ body {
   padding-bottom: 2.5rem;
 }
 .support--margin {
-  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
-.support__title-box {
+/*radio info block*/
+.radio-info {
   display: flex;
   justify-content: space-between;
 
   margin-bottom: 1.5rem;
 }
-.support__option-box {
+.radio-info__option-box {
   display: flex;
   align-items: center;
 }
-.support__option-box--margin {
+.radio-info__option-box--margin {
   margin-bottom: 1.5rem;
 }
-.support__radio {
+.radio-info__radio {
   width: 2rem;
   height: 2rem;
 
   transform: translateY(0.2rem);
 }
-.support__title {
+.radio-info__title {
   margin-left: 2rem;
 
   font-size: 1.6rem;
   font-weight: 700;
 }
-.support__pledge {
+.radio-info__text {
   display: inline-block;
   margin-left: 2rem;
 
@@ -460,10 +461,10 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
 }
-.support__amount-pledge {
+.radio-info__amount {
   font-size: 1.6rem;
 }
-.support__amount-pledge > span {
+.radio-info__amount > span {
   font-weight: 700;
   margin-right: 0.3rem;
 }
