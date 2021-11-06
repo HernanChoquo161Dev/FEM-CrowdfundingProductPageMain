@@ -23,7 +23,7 @@ function createElement(Attributes, children){
   
 function createBlockThanks(dataJson){
     const boxImage = createElement({element: "div",class:"thanks__box-image"},
-                                   [createElement({element:"img",class:"thanks__image",src:"../images/icon-check.svg"},null)]);
+                                   [createElement({element:"img",class:"thanks__image",src:"./images/icon-check.svg"},null)]);
     
     const children = [boxImage,
                       createElement({element:"h1",class:"thanks__title"}, dataJson[0].thanks[0]),
@@ -36,7 +36,7 @@ function createBlockThanks(dataJson){
 }
 function createBlockOptions(dataJson){
 
-  const childrenContent = [createElement({element:"img",class:"options__icon",src:"../images/dollar-symbol.png"},null),
+  const childrenContent = [createElement({element:"img",class:"options__icon",src:"./images/dollar-symbol.png"},null),
   createElement({element:"input",class:"options__support", value:"25",type:"text"},null)];
   const contentInput = createElement({element:"div",class:"options-content-input"},childrenContent);
   const childrenOption = [contentInput, 
@@ -90,7 +90,7 @@ function createSupportWindow(dataJson){
   console.log(dataJson[0].supportCustom[0].options[0]);
     let contentImage = createElement({element:"div",class:"support-window__image-box"},
                                           [createElement({element:"img", 
-                                          src:"../images/icon-close-modal.svg",
+                                          src:"./images/icon-close-modal.svg",
                                           class:"support-window__image"},null)]);
     let windowChildren = [contentImage, 
                             createElement({element:"h2",class:"support-window__title"},dataJson[0].menu[0]),
