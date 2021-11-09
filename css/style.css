@@ -434,14 +434,14 @@ body {
   display: flex;
   justify-content: space-between;
 
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 .radio-info__option-box {
   display: flex;
   align-items: center;
 }
 .radio-info__option-box--margin {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 .radio-info__radio {
   width: 2rem;

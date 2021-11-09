@@ -27,7 +27,7 @@ function closeOptionMenu(){
     lastOption = undefined;
 }
 function insertBlockHTML(blockFather, funcitionCreateHTML, activeElementHTML, dataJson){
-    const elem = funcitionCreateHTML(dataJson);
+    const elem = funcitionCreateHTML(dataJson,true);
     blockFather.appendChild(elem);
 
     activeElementHTML();
@@ -83,7 +83,7 @@ function activeBlockMenu(){
         btnMenu.addEventListener("click", (event)=>{
             const supportWindowsBlock = document.querySelector(".support-window");
             supportWindowsBlock.classList.toggle("support-window--hidden");
-            createBlock(supportMenuBlock,createBlockThanks,insertBlockHTML,activeBtnBlockThanks);
+            createBlock(supportMenuBlock,TempleteThanksHTML,insertBlockHTML,activeBtnBlockThanks);
         });
     });
 }

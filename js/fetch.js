@@ -1,4 +1,4 @@
-function createBlock(blockFather,createHTML,insertHTML,activeHTML){
+function createBlock(container,createHTML,insertHTML,EventHTML){
     fetch("./public/data.json",{
         headers : { 
         'ContentS-Type': 'application/json',
@@ -7,7 +7,7 @@ function createBlock(blockFather,createHTML,insertHTML,activeHTML){
     })
     .then(response => response.json())
     .then(data => {
-        insertHTML(blockFather, createHTML,activeHTML,data);
+        insertHTML(container, createHTML,EventHTML,data);
     })
     .catch(error => console.log(error));
 }
