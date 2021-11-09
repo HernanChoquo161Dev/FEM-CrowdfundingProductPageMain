@@ -1,3 +1,4 @@
+/*Este metodo es un poco complicado de modificar*/
 function createElement(Attributes, children){
     let newElement;
     if(Attributes){
@@ -86,8 +87,6 @@ function createBlockSupport(dataJson){
   return blockSupport;
 }
 function createSupportWindow(dataJson){
-  console.log(dataJson);
-  console.log(dataJson[0].supportCustom[0].options[0]);
     let contentImage = createElement({element:"div",class:"support-window__image-box"},
                                           [createElement({element:"img", 
                                           src:"./images/icon-close-modal.svg",
@@ -96,9 +95,9 @@ function createSupportWindow(dataJson){
                             createElement({element:"h2",class:"support-window__title"},dataJson[0].menu[0]),
                             createElement({element:"p",class:"support-window__text"},dataJson[0].menu[1]),
                             createBlockSupport(dataJson[0].supportNormal),
-                            createBlockSupportOptions(dataJson[0].supportCustom[0],""),
-                            createBlockSupportOptions(dataJson[0].supportCustom[1],""),
-                            createBlockSupportOptions(dataJson[0].supportCustom[2],"")];
+                            createBlockSupportOptions(dataJson[0].supportCustom[0],"bambooStand"),
+                            createBlockSupportOptions(dataJson[0].supportCustom[1],"blackEdition"),
+                            createBlockSupportOptions(dataJson[0].supportCustom[2],"mahoganySpecial")];
     let windows = createElement({element:"div",class:"support-window"}, windowChildren);       
     return windows;
 }
