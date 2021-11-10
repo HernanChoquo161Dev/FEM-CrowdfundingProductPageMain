@@ -128,6 +128,7 @@ function activeBlockMenu(){
     const continueOption = document.querySelectorAll(".btn-support--menu");
     continueOption.forEach((btnMenu)=>{
         btnMenu.addEventListener("click", (event)=>{
+            window.scrollTo(0, 0);
             const supportWindowsBlock = document.querySelector(".support-window");
             supportWindowsBlock.classList.toggle("support-window--hidden");
             createBlock(supportMenuBlock,TempleteThanksHTML,insertBlockHTML,activeBtnBlockThanks);
