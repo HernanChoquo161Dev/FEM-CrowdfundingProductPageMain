@@ -7,6 +7,12 @@ let curretProgress = (currentMoney * 100) / targetMoney;
 const progressBar = document.querySelector(".progress-bar__progress");
 progressBar.style.width = `${curretProgress}%`;
 
+function changeColorSVG(){
+    const circleSVG = document.querySelector("#svg-c");
+    circleSVG.classList.toggle("bookmark__circle");
+    const pathSVG = document.querySelector("#svg-g");
+    pathSVG.classList.toggle("bookmark-svg");
+}
 function upgradeTargetMoney(money){
     if(currentMoney < targetMoney){
         currentMoney+= money;
@@ -61,6 +67,8 @@ const bookmarkContent = document.querySelector(".bookmark");
 bookmarkContent.addEventListener("click", (event)=>{
     let bookmark = document.querySelector(".bookmark__save");
     bookmark.classList.toggle("bookmark__save--color");
+
+    changeColorSVG();
 });
 //Active option exit menu, input radio and button card menu
 function activeBlockMenu(){
