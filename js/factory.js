@@ -1,3 +1,13 @@
+//-----
+function stringAttributes(attributes){
+  const splitAttributes = Object.entries(attributes);
+  let stringAttributes = "";
+
+  splitAttributes.forEach(([key, value]) => { stringAttributes+= `${key}:${value} `});
+
+  return stringAttributes;
+}
+//-----
 function createElement(element, attributes, children){
   if(element){
     let newElement = createSimpleElement(element,attributes);
@@ -47,7 +57,7 @@ function createBlockOptions(dataJson, option){
   const templete = `
     <div class="options-content-input">
       <img class="options__icon" src="./images/dollar-symbol.png"></img>
-      <input class="options__support" type="text" value="25">
+      <input class="options__support" type="text" value="${dataJson.options[2]}">
     </div>
     <button class="btn-support btn-support--menu">${dataJson.options[1]}</button>
   `;
@@ -55,23 +65,13 @@ function createBlockOptions(dataJson, option){
   const optionTemplete = `<div class="options">${templete}</div>`;
   return option ? container : optionTemplete;
 }
-//-----
-function stringAttributes(attributes){
-  const splitAttributes = Object.entries(attributes);
-  let stringAttributes = "";
-
-  splitAttributes.forEach(([key, value]) => { stringAttributes+= `${key}:${value} `});
-
-  return stringAttributes;
-}
-//-----
-function createRadioInfo(dataJson, option){
+function createRadioInfo(dataJson, textFor, option){
   const container = createSimpleElement("div", {class:"radio-info"});
   const templete = `
     <div class="radio-info__option-box">
-      <input type="radio" id="" tabindex="2" name="project-support" value="" class="radio-info__radio">
+      <input type="radio" id="${textFor}" tabindex="2" name="project-support" class="radio-info__radio">
       <div class="radio-info__content">
-        <label for="" class="radio-info__title">${dataJson.radio[0]}</label>
+        <label for="${textFor}" class="radio-info__title">${dataJson.radio[0]}</label>
         <p class="radio-info__text">${dataJson.radio[1]}</p>
       </div>
     </div>
@@ -80,12 +80,11 @@ function createRadioInfo(dataJson, option){
   const optionTemplete = `<div class="radio-info">${templete}</div>`;
   return option ? container : optionTemplete;
 }
-function createBlockSupportOptions(dataJson,option){
-  console.log(dataJson);
+function createBlockSupportOptions(dataJson, textFor,option){
   const container = createSimpleElement("div", {class:"support support--margin"});
   const templete = `
     <div class="support__content">
-      ${createRadioInfo(dataJson, false)}
+      ${createRadioInfo(dataJson, textFor, false)}
       <div class="support__pledge-content">
         <p class="radio-info__amount"><span>${dataJson.radio[2]}</span> ${dataJson.radio[3]}</p>
       </div>
@@ -107,7 +106,7 @@ function createBlockSupport(dataJson, option){
   const templete = `
     <div class="support__content support__content--simple">
     <div class="radio-info__option-box  radio-info__option-box--margin">
-      <input type="radio" id="no-reward" tabindex="1" name="project-support" value="" class="radio-info__radio">
+      <input type="radio" id="no-reward" tabindex="1" name="project-support" class="radio-info__radio">
       <label for="no-reward" class="radio-info__title">${dataJson[0]}</label>
     </div>
     <p class="support__text">${dataJson[1]}</p>
@@ -126,9 +125,9 @@ function createSupportWindow(dataJson,option){
       <h2 class="support-window__title">${dataJson[0].menu[0]}</h2>
       <p class="support-window__text">${dataJson[0].menu[1]}</p>
       ${createBlockSupport(dataJson[0].supportNormal,"",false)}
-      ${createBlockSupportOptions(dataJson[0].supportCustom[0], false)}
-      ${createBlockSupportOptions(dataJson[0].supportCustom[1], false)}
-      ${createBlockSupportOptions(dataJson[0].supportCustom[2], false)}
+      ${createBlockSupportOptions(dataJson[0].supportCustom[0], "bamboo-stand", false)}
+      ${createBlockSupportOptions(dataJson[0].supportCustom[1], "black-edition", false)}
+      ${createBlockSupportOptions(dataJson[0].supportCustom[2], "mahogany-edition", false)}
     `;
     container.innerHTML = templete;
     const optionTemplete = `<div class="support-window">${templete}</div>`;

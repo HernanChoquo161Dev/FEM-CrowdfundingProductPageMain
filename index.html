@@ -65,12 +65,17 @@
           </p>
           <div class="presentation-section__box-options">
             <!--btn support block-->
-            <button class="btn-support">Back this project</button>
+            <button id="btn" class="btn-support">Back this project</button>
             <!--bookmark block-->
             <div class="bookmark">
               <button class="bookmark__save">Bookmarked</button>
               <div class="bookmark__box-image">
-                <img src="./images/icon-bookmark.svg" alt="" class="bookmark__image"></img>
+                <svg class="bookmark__image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 56">
+                  <g fill="none" fill-rule="evenodd" id="bookmark-svg">
+                      <circle fill="#2F2F2F" id="bookmark__circle" cx="28" cy="28" r="28" />
+                      <path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
+                  </g>
+              </svg>
               </div>
             </div>
           </div>
@@ -81,12 +86,12 @@
           <div class="project-info">
             <!--info block-->
             <div class="info info--padding-right">
-              <h2 class="info__title">$89,914</h2>
+              <h2 id="currentMoney" class="info__title">$89,914</h2>
               <p class="info__text">of $100,000 backed</p>
             </div>
             <!--info block-->
             <div class="info info--border info--padding-right">
-              <h2 class="info__title">5,007</h2>
+              <h2 id="current" class="info__title">5,007</h2>
               <p class="info__text">total backers</p>
             </div>
             <!--info block-->
