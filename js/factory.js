@@ -70,21 +70,28 @@ function createRadioInfo(dataJson, option){
   const templete = `
     <div class="radio-info__option-box">
       <input type="radio" id="" tabindex="2" name="project-support" value="" class="radio-info__radio">
-      <label for="" class="radio-info__title">${dataJson.radio[0]}</label>
-      <p class="radio-info__text">${dataJson.radio[1]}</p>
+      <div class="radio-info__content">
+        <label for="" class="radio-info__title">${dataJson.radio[0]}</label>
+        <p class="radio-info__text">${dataJson.radio[1]}</p>
+      </div>
     </div>
-    <p class="radio-info__amount"><span>${dataJson.radio[2]}</span> ${dataJson.radio[3]}</p>
   `;
   container.innerHTML = templete;
   const optionTemplete = `<div class="radio-info">${templete}</div>`;
   return option ? container : optionTemplete;
 }
 function createBlockSupportOptions(dataJson,option){
+  console.log(dataJson);
   const container = createSimpleElement("div", {class:"support support--margin"});
   const templete = `
     <div class="support__content">
       ${createRadioInfo(dataJson, false)}
-      <div class="support__text">${dataJson.text}</div>
+      <div class="support__pledge-content">
+        <p class="radio-info__amount"><span>${dataJson.radio[2]}</span> ${dataJson.radio[3]}</p>
+      </div>
+      <div class="support__text-content">
+        <p class="support__text">${dataJson.text}</p>
+      </div>
     </div>
     <div class="support__box-options support__box-options--show">
       <p class="support__options-text">${dataJson.options[0]}</p>
@@ -98,7 +105,7 @@ function createBlockSupportOptions(dataJson,option){
 function createBlockSupport(dataJson, option){
   const container = createSimpleElement("div", {class:"support"});
   const templete = `
-    <div class="support__content">
+    <div class="support__content support__content--simple">
     <div class="radio-info__option-box  radio-info__option-box--margin">
       <input type="radio" id="no-reward" tabindex="1" name="project-support" value="" class="radio-info__radio">
       <label for="no-reward" class="radio-info__title">${dataJson[0]}</label>

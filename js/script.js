@@ -96,3 +96,11 @@ btnSupportCard.forEach((btn)=>{
         window.scrollTo(0, 0);
     });
 });
+
+//Menu icon
+const menuIcon = document.querySelector(".nav-page__image-menu");
+menuIcon.addEventListener("click", (event)=>{
+    console.log("click");
+    const menuMobile = document.querySelector(".menu");
+    menuMobile.classList.toggle("menu--show");
+});
